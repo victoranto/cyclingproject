@@ -73,3 +73,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 https://stackblitz.com/edit/react-basic-authentication-example-vjgxkm?file=LoginPage%2FLoginPage.js,LoginPage%2Findex.js,_helpers%2Ffake-backend.js
 
 https://codesandbox.io/s/react-basic-authentication-example-forked-3sgvzh?file=/src/HomePage/HomePage.jsx
+
+
+Combinacion de Fuentes generado por https://fontjoy.com/
+https://fonts.google.com/share?selection.family=Cabin%20Condensed:wght@400;700%7CHind:wght@400;700%7CLato:wght@100
+
+Referencia Diseño
+https://www.timetime.in/
+
