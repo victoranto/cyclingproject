@@ -13,6 +13,7 @@ export default function Home(){
     const authenticate = async () => {
       try { 
         const access_token = JSON.parse(localStorage.getItem("accessToken"))
+        console.log(access_token)
         const userInfo = await getUserInfo(access_token)
         const activities = await getActivities(access_token)
         setUserInfo(userInfo)
