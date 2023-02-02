@@ -1,4 +1,6 @@
 import axios from "axios";
+import { setUser } from '../redux/actions/userActions'
+import store from '../redux/store'
 
 const { REACT_APP_CLIENT_ID, REACT_APP_CLIENT_SECRET } = process.env;
 
@@ -46,6 +48,7 @@ export const getUserInfo = async (accessToken) => {
           `https://www.strava.com/api/v3/athlete`,
           { headers: { Authorization: `Bearer ${accessToken}` } }
       );
+      store.dispatch(setUser(response.data));
       return response;
   } catch (error) {
       console.log(error);
@@ -57,6 +60,19 @@ export const getActivities = async (accessToken) => {
         const response = await axios.get(
             `https://www.strava.com/api/v3/athlete/activities`,
             { headers: { Authorization: `Bearer ${accessToken}` } }
+        );
+        return response;
+    } catch (error) {
+        console.log(error);
+    }
+  };
+
+  export const getActivitiesByDate = async (accessToken, from, to) => {
+    try {
+        console.log('to:', to, 'from:', from)
+        const response = await axios.get(
+            `https://www.strava.com/api/v3/athlete/activities`,
+            { headers: { Authorization: `Bearer ${accessToken}` }, params: { 'before': from, 'after':to } }
         );
         return response;
     } catch (error) {

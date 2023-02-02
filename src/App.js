@@ -12,8 +12,10 @@ import './App.css';
 import Home from './components/Home';
 import Login from './components/Login';
 import Activity from './components/Activity';
-import MapSegments from './components/MapSegments';
+//import MapSegments from './components/MapSegments';
 import StravaRedirect from './components/StravaRedirect';
+import Buscador from './components/Buscador';
+
 
 function App() {
   return (
@@ -27,6 +29,9 @@ function App() {
             <li>
               <Link to="/login">Login</Link>
             </li>
+            <li>
+              <Link to="/buscador">Buscador</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
@@ -34,7 +39,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path="/redirect" element={<StravaRedirect />} />
           <Route path="/activity/:id" element={<Activity />} />
-          <Route path="/map" element={<MapSegments />} />
+          <Route path="/buscador" element={<Buscador />} />
         </Routes>
       </div>
     </Router>
